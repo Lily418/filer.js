@@ -546,7 +546,7 @@ var Filer = new function() {
           if (dirEntry.isDirectory) { // TODO: check shouldn't be necessary.
             // Recursively add the new subfolder if we have more to create and
             // There was more than one folder to create.
-            if (folders.length && folderParts.length != 1) {
+            if (folders.length > 1 && folderParts.length != 1) {
               createDir(dirEntry, folders.slice(1));
             } else {
               // Return the last directory that was created.
